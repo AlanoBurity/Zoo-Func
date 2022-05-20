@@ -1,7 +1,7 @@
 const data = require('../data/zoo_data');
 
 function countAnimals(animal) {
-  // seu código aquaaaai
+  // seu código aqui
 }
 
 module.exports = countAnimals;
