@@ -16,4 +16,16 @@ describe('Testes da função HandlerElephants', () => {
   it('Testa caso o parametro não seja uma string;', () => {
     expect(handlerElephants(20)).toBe('Parâmetro inválido, é necessário uma string');
   });
+  it('Para o argumento popularity deve retornar um número igual ou maior a 5;', () => {
+    expect(handlerElephants('popularity')).toBeGreaterThanOrEqual(5);
+  });
+  it('testa se a função getElephants com o parametro "location" retorna o esperado', () => {
+    expect(handlerElephants('location')).toBe('NW');
+  });
+  it('Passando por argumento um objeto vazio ({}) deve retornar a string', () => {
+    expect(handlerElephants({})).toBe('Parâmetro inválido, é necessário uma string');
+  });
+  it('Ausencia de parametro no objeto elephant', () => {
+    expect(handlerElephants('')).toBeNull();
+  });
 });
