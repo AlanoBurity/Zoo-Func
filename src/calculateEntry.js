@@ -1,5 +1,5 @@
-const data = require('../data/zoo_data');
 const { prices } = require('../data/zoo_data');
+
 function countEntrants(visitantesFaixaEtaria) {
   // seu código aqui
   return {
