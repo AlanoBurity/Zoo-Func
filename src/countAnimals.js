@@ -9,12 +9,12 @@ function countAnimals(animal) {
     }, {});
     return semInput;
   }
-  const comInput = species.find((ell2) => {
+/*   const comInput = species.find((ell2) => {
     if (Object.values(animal).includes(ell2.name)) {
       return ell2;
     }
   });
-  return comInput.residents.length;
+  return comInput.residents.length; */
 }
 console.log(countAnimals({ species: 'lions' }));
 
