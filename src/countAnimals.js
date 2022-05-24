@@ -1,4 +1,3 @@
-const data = require('../data/zoo_data');
 const { species } = require('../data/zoo_data');
 
 function countAnimals(animal) {
@@ -9,12 +8,17 @@ function countAnimals(animal) {
     }, {});
     return semInput;
   }
-/*   const comInput = species.find((ell2) => {
-    if (Object.values(animal).includes(ell2.name)) {
-      return ell2;
-    }
-  });
-  return comInput.residents.length; */
+  const { specie, sex } = animal;
+
+  if (specie && sex) {
+    return species
+      .find(({ name }) => name === specie).residents
+      .filter(({ sex: sexAnimal }) => sexAnimal === sex).length;
+  }
+
+  if (specie) {
+    return species.find(({ name }) => name === specie).residents.length;
+  }
 }
 console.log(countAnimals({ species: 'lions' }));
 
